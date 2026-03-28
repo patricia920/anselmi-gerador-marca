@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anselmi â Prompt por Marca</title>
+<title>Anselmi — Prompt por Marca</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -14,7 +14,7 @@
     min-height: 100vh;
   }
 
-  /* ââ TOPBAR ââ */
+  /* ── TOPBAR ── */
   .topbar {
     background: #111;
     color: #fff;
@@ -26,7 +26,7 @@
     font-weight: 500;
   }
 
-  /* ââ HERO ââ */
+  /* ── HERO ── */
   .hero {
     background: #fff;
     text-align: center;
@@ -54,7 +54,7 @@
     color: #999;
   }
 
-  /* ââ MAIN CARD ââ */
+  /* ── MAIN CARD ── */
   .main-wrap {
     max-width: 700px;
     margin: 36px auto 60px;
@@ -67,7 +67,7 @@
     padding: 36px 40px 40px;
   }
 
-  /* ââ SECTION HEADER ââ */
+  /* ── SECTION HEADER ── */
   .section-header {
     display: flex;
     align-items: center;
@@ -104,7 +104,7 @@
     line-height: 1.5;
   }
 
-  /* ââ BRAND CARDS GRID ââ */
+  /* ── BRAND CARDS GRID ── */
   .brand-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -170,14 +170,14 @@
     line-height: 1.45;
   }
 
-  /* ââ DIVIDER ââ */
+  /* ── DIVIDER ── */
   .divider {
     border: none;
     border-top: 1px solid #e5e0d8;
     margin: 28px 0;
   }
 
-  /* ââ REFERENCE SECTION ââ */
+  /* ── REFERENCE SECTION ── */
   .ref-tabs {
     display: flex;
     gap: 0;
@@ -244,7 +244,7 @@
     margin-top: 6px;
   }
 
-  /* ââ INPUT WRAPPER WITH CLEAR ââ */
+  /* ── INPUT WRAPPER WITH CLEAR ── */
   .input-wrap {
     position: relative;
   }
@@ -264,7 +264,7 @@
   }
   .input-clear:hover { color: #555; }
 
-  /* ââ ERROR MSG ââ */
+  /* ── ERROR MSG ── */
   .error-msg {
     background: #fff3f3;
     border: 1px solid #f5c0c0;
@@ -277,7 +277,7 @@
   }
   .error-msg.visible { display: block; }
 
-  /* ââ BUTTONS ââ */
+  /* ── BUTTONS ── */
   .btn-row {
     display: flex;
     gap: 10px;
@@ -310,7 +310,7 @@
   }
   .btn-primary:hover { background: #333; }
 
-  /* ââ OUTPUT ââ */
+  /* ── OUTPUT ── */
   .output-area {
     display: none;
     margin-top: 28px;
@@ -359,7 +359,7 @@
   .btn-copy:hover { background: #333; }
   .btn-copy.copied { background: #2d7a3a; border-color: #2d7a3a; }
 
-  /* ââ TOAST ââ */
+  /* ── TOAST ── */
   .toast {
     position: fixed;
     bottom: 28px;
@@ -378,7 +378,7 @@
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-  /* ââ PDF UPLOAD ââ */
+  /* ── PDF UPLOAD ── */
   .upload-area {
     border: 1.5px dashed #ccc8be;
     border-radius: 2px;
@@ -422,7 +422,7 @@
     max-width: 80%;
   }
   .upload-info-name::before {
-    content: 'ð ';
+    content: '📄 ';
   }
   .upload-clear {
     font-size: 16px;
@@ -433,7 +433,7 @@
   }
   .upload-clear:hover { color: #555; }
 
-  /* ââ FOOTER ââ */
+  /* ── FOOTER ── */
   .footer {
     text-align: center;
     padding: 32px 20px 40px;
@@ -456,12 +456,12 @@
 </head>
 <body>
 
-<div class="topbar">Prompt por Marca â Anselmi</div>
+<div class="topbar">Prompt por Marca — Anselmi</div>
 
 <div class="hero">
   <div class="hero-logo">ANSELMI</div>
   <div class="hero-sub">Gerador de Prompt por Marca</div>
-  <div class="hero-compat">CompatÃ­vel com Skill anselmi-descricoes v7</div>
+  <div class="hero-compat">Compatível com Skill anselmi-descricoes v7</div>
 </div>
 
 <div class="main-wrap">
@@ -469,69 +469,70 @@
 
     <!-- MARCA -->
     <div class="section-header">
-      <span class="section-title">Marca de ReferÃªncia</span>
-      <span class="badge">ObrigatÃ³rio</span>
+      <span class="section-title">Marca de Referência</span>
+      <span class="badge">Obrigatório</span>
     </div>
-    <p class="section-desc">Escolha o estilo de descriÃ§Ã£o. Cada marca tem tom, idioma e estrutura diferentes.</p>
+    <p class="section-desc">Escolha o estilo de descrição. Cada marca tem tom, idioma e estrutura diferentes.</p>
 
     <div class="brand-grid">
 
       <div class="brand-card" onclick="selectBrand(this,'cos')">
         <input type="radio" name="marca" value="cos">
         <div class="brand-card-name">COS</div>
-        <div class="brand-card-style">Editorial de Curadoria Â· PortuguÃªs BR</div>
-        <div class="brand-card-desc">3â5 frases que posicionam a peÃ§a como obra â contexto de coleÃ§Ã£o, material com sensaÃ§Ã£o resultante, detalhes construtivos em prosa.</div>
+        <div class="brand-card-style">Editorial de Curadoria · Português BR</div>
+        <div class="brand-card-desc">3–5 frases que posicionam a peça como obra — contexto de coleção, material com sensação resultante, detalhes construtivos em prosa.</div>
       </div>
 
       <div class="brand-card" onclick="selectBrand(this,'massimodutti')">
         <input type="radio" name="marca" value="massimodutti">
         <div class="brand-card-name">Massimo Dutti</div>
-        <div class="brand-card-style">Luxo AcessÃ­vel Â· PortuguÃªs BR</div>
-        <div class="brand-card-desc">2â4 frases aspiracionais: qualidade do material + benefÃ­cio funcional + convite sutil ao lifestyle.</div>
+        <div class="brand-card-style">Luxo Acessível · Português BR</div>
+        <div class="brand-card-desc">2–4 frases aspiracionais: qualidade do material + benefício funcional + convite sutil ao lifestyle.</div>
       </div>
 
       <div class="brand-card" onclick="selectBrand(this,'arket')">
         <input type="radio" name="marca" value="arket">
         <div class="brand-card-name">Arket</div>
-        <div class="brand-card-style">Artesanal Minimalista Â· PortuguÃªs BR</div>
-        <div class="brand-card-desc">2â3 frases densas focando em craft e material. Honesto, preciso, sem floreios.</div>
+        <div class="brand-card-style">Artesanal Minimalista · Português BR</div>
+        <div class="brand-card-desc">2–3 frases densas focando em craft e material. Honesto, preciso, sem floreios.</div>
       </div>
 
       <div class="brand-card" onclick="selectBrand(this,'zara')">
         <input type="radio" name="marca" value="zara">
         <div class="brand-card-name">Zara</div>
-        <div class="brand-card-style">TÃ©cnico Objetivo Â· PortuguÃªs BR</div>
-        <div class="brand-card-desc">DescriÃ§Ã£o curta e direta, ~80 chars. Sem adjetivos subjetivos â apenas o que a peÃ§a Ã©.</div>
+        <div class="brand-card-style">Técnico Objetivo · Português BR</div>
+        <div class="brand-card-desc">Descrição curta e direta, ~80 chars. Sem adjetivos subjetivos — apenas o que a peça é.</div>
       </div>
 
       <div class="brand-card" onclick="selectBrand(this,'hm')">
         <input type="radio" name="marca" value="hm">
         <div class="brand-card-name">H&amp;M</div>
-        <div class="brand-card-style">CatÃ¡logo TÃ©cnico Â· PortuguÃªs BR</div>
-        <div class="brand-card-desc">1â2 frases longas empilhando todos os atributos em sequÃªncia. MÃ¡xima info, mÃ­nimo espaÃ§o.</div>
+        <div class="brand-card-style">Catálogo Técnico · Português BR</div>
+        <div class="brand-card-desc">1–2 frases longas empilhando todos os atributos em sequência. Máxima info, mínimo espaço.</div>
       </div>
 
       <div class="brand-card" onclick="selectBrand(this,'aritzia')">
         <input type="radio" name="marca" value="aritzia">
         <div class="brand-card-name">Aritzia</div>
-        <div class="brand-card-style">Conversacional + Storytelling Â· PortuguÃªs BR</div>
-        <div class="brand-card-desc">2 camadas: descriÃ§Ã£o curta para card + Nota do Designer com storytelling do fio.</div>
+        <div class="brand-card-style">Conversacional + Storytelling · Português BR</div>
+        <div class="brand-card-desc">2 camadas: descrição curta para card + Nota do Designer com storytelling do fio.</div>
       </div>
 
     </div>
 
     <hr class="divider">
 
-    <!-- REFERÃNCIA DO PRODUTO -->
+    <!-- REFERÊNCIA DO PRODUTO -->
     <div class="section-header">
-      <span class="section-title">ReferÃªncia do Produto</span>
+      <span class="section-title">Referência do Produto</span>
       <span class="badge opt">Opcional</span>
     </div>
-    <p class="section-desc">Adicione o link do Google Slides, carregue um PDF ou descreva as specs manualmente.</p>
+    <p class="section-desc">Adicione o link do Google Slides, carregue um PDF, um PPTX ou descreva as specs manualmente.</p>
 
     <div class="ref-tabs">
       <div class="ref-tab active" onclick="switchTab(this,'slides')">Google Slides</div>
       <div class="ref-tab" onclick="switchTab(this,'pdf')">PDF</div>
+      <div class="ref-tab" onclick="switchTab(this,'pptx')">PPTX</div>
       <div class="ref-tab" onclick="switchTab(this,'manual')">Specs Manuais</div>
     </div>
 
@@ -542,7 +543,7 @@
       </div>
       <div class="input-wrap">
         <input type="text" id="slidesLink" placeholder="https://docs.google.com/presentation/d/..." oninput="handleSlidesInput(this)">
-        <span class="input-clear" id="slidesClear" onclick="clearSlides()">Ã</span>
+        <span class="input-clear" id="slidesClear" onclick="clearSlides()">×</span>
       </div>
       <p class="input-hint">Ex: https://docs.google.com/presentation/d/1abc123.../edit</p>
     </div>
@@ -560,23 +561,40 @@
       </div>
       <div class="upload-info" id="pdfInfo">
         <span class="upload-info-name" id="pdfName"></span>
-        <span class="upload-clear" onclick="clearPdf()">Ã</span>
+        <span class="upload-clear" onclick="clearPdf()">×</span>
+      </div>
+    </div>
+
+    <div id="panel-pptx" class="ref-panel">
+      <div class="input-label">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        Arquivo PPTX
+      </div>
+      <input type="file" id="pptxInput" accept=".pptx,.ppt" style="display:none" onchange="handlePptxUpload(event)">
+      <div class="upload-area" id="pptxUploadArea" onclick="document.getElementById('pptxInput').click()">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#666" stroke-width="1.5" display="block" style="margin:0 auto 10px"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><line x1="12" y1="10" x2="12" y2="13"/><line x1="10" y1="11.5" x2="14" y2="11.5"/></svg>
+        <div class="upload-area-label">Clique para selecionar um PPTX</div>
+        <div class="upload-area-hint">Max 50MB</div>
+      </div>
+      <div class="upload-info" id="pptxInfo">
+        <span class="upload-info-name" id="pptxName"></span>
+        <span class="upload-clear" onclick="clearPptx()">×</span>
       </div>
     </div>
 
     <div id="panel-manual" class="ref-panel">
       <div class="input-label">Specs do Produto</div>
-      <textarea id="specsManual" placeholder="Nome, tipo, cor, composiÃ§Ã£o, ponto, modelagem, manga, gola/decote, comprimento, fecho...
+      <textarea id="specsManual" placeholder="Nome, tipo, cor, composição, ponto, modelagem, manga, gola/decote, comprimento, fecho...
 
 Ex:
 Nome: Maxipull Scena 18678
 Tipo: Maxipull
 Cor: Off-white
-ComposiÃ§Ã£o: 70% AlgodÃ£o, 30% Poliamida
-Ponto: Ponto pÃ©rola
+Composição: 70% Algodão, 30% Poliamida
+Ponto: Ponto pérola
 Modelagem: Oversized
 Manga: Longa
-Gola: Gola chaminÃ©
+Gola: Gola chaminé
 Comprimento: Midi
 Fecho: Sem fecho"></textarea>
     </div>
@@ -584,7 +602,7 @@ Fecho: Sem fecho"></textarea>
     <!-- ERRO -->
     <div class="error-msg" id="errorMsg">Por favor, selecione uma marca antes de gerar o prompt.</div>
 
-    <!-- BOTÃES -->
+    <!-- BOTÕES -->
     <div class="btn-row">
       <button class="btn btn-secondary" onclick="resetAll()">Limpar</button>
       <button class="btn btn-primary" onclick="generatePrompt()">
@@ -607,14 +625,15 @@ Fecho: Sem fecho"></textarea>
 
 <div class="footer">
   <div class="footer-logo">Anselmi</div>
-  <div class="footer-sub">Ferramenta interna â Prompt por marca para descriÃ§Ãµes de e-commerce</div>
+  <div class="footer-sub">Ferramenta interna — Prompt por marca para descrições de e-commerce</div>
 </div>
 
-<div class="toast" id="toast">Copiado para a Ã¡rea de transferÃªncia</div>
+<div class="toast" id="toast">Copiado para a área de transferência</div>
 
 <script>
 let selectedBrand = '';
 let currentPdfName = '';
+let currentPptxName = '';
 
 function selectBrand(card, value) {
   document.querySelectorAll('.brand-card').forEach(c => c.classList.remove('selected'));
@@ -657,6 +676,28 @@ function clearPdf() {
   document.getElementById('pdfUploadArea').style.display = '';
 }
 
+function handlePptxUpload(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  if (file.size > 50 * 1024 * 1024) {
+    alert('O arquivo PPTX excede o limite de 50MB.');
+    event.target.value = '';
+    return;
+  }
+  currentPptxName = file.name;
+  document.getElementById('pptxName').textContent = file.name;
+  document.getElementById('pptxInfo').classList.add('visible');
+  document.getElementById('pptxUploadArea').style.display = 'none';
+}
+
+function clearPptx() {
+  currentPptxName = '';
+  document.getElementById('pptxInput').value = '';
+  document.getElementById('pptxName').textContent = '';
+  document.getElementById('pptxInfo').classList.remove('visible');
+  document.getElementById('pptxUploadArea').style.display = '';
+}
+
 function clearSlides() {
   const input = document.getElementById('slidesLink');
   input.value = '';
@@ -664,324 +705,324 @@ function clearSlides() {
   input.focus();
 }
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// ──────────────────────────────────────────
 // REGRAS POR MARCA
-// ââââââââââââââââââââââââââââââââââââââââââ
+// ──────────────────────────────────────────
 
 const BRAND_RULES = {
 
-  cos: `MARCA DE REFERÃNCIA: COS â Editorial de Curadoria (Espanhol)
+  cos: `MARCA DE REFERÊNCIA: COS — Editorial de Curadoria (Espanhol)
 
 TOM E FILOSOFIA:
-A COS descreve roupas como um curador descreve uma obra: com respeito, precisÃ£o e distÃ¢ncia editorial.
-O parÃ¡grafo Ã© um ensaio em miniatura que posiciona a peÃ§a na estÃ©tica da coleÃ§Ã£o antes de qualquer atributo tÃ©cnico.
-NÃ£o Ã© fria â Ã© contida e confiante. Nunca explica o "porquÃª" de um detalhe: nomeia com autoridade.
-Idioma de saÃ­da: PORTUGUÃS BRASILEIRO â escreva toda a descriÃ§Ã£o em portuguÃªs BR.
-Inspire-se nos padrÃµes e no tom da COS, mas adapte o vocabulÃ¡rio para o portuguÃªs.
+A COS descreve roupas como um curador descreve uma obra: com respeito, precisão e distância editorial.
+O parágrafo é um ensaio em miniatura que posiciona a peça na estética da coleção antes de qualquer atributo técnico.
+Não é fria — é contida e confiante. Nunca explica o "porquê" de um detalhe: nomeia com autoridade.
+Idioma de saída: PORTUGUÊS BRASILEIRO — escreva toda a descrição em português BR.
+Inspire-se nos padrões e no tom da COS, mas adapte o vocabulário para o português.
 
 ESTRUTURA (3 a 5 frases, ~46 palavras):
-[Gancho contextual â posiciona na coleÃ§Ã£o/estÃ©tica] +
-[Material â "confeccionado/a en X, lo que le confiere Y"] +
-[Design â detalhes construtivos em prosa] +
-[Acabamento â ribetes, cuello, detalle final]
+[Gancho contextual — posiciona na coleção/estética] +
+[Material — "confeccionado/a en X, lo que le confiere Y"] +
+[Design — detalhes construtivos em prosa] +
+[Acabamento — ribetes, cuello, detalle final]
 
-PADRÃES DE ABERTURA â em portuguÃªs BR (varie â junca nunca repita o mesmo em produtos consecutivos):
-1. "Nesta temporada, os designers Anselmi canalizam..." (~19Ã)
-2. "A coleÃ§Ã£o Anselmi destaca os essenciais de guarda-roupa renovados com detalhes inesperados." (~15Ã)
-3. "Os designers Anselmi reinventaram os clÃ¡ssicos com um espÃ­rito de design meditado." (~12Ã)
-4. "O cashmere de toque luxuosamente macio Ã© um pilar fundamental das coleÃ§Ãµes da Anselmi." (~11Ã)
-5. "As silhuetas [adj] definem a coleÃ§Ã£o feminina desta temporada." (~8Ã)
-6. "Os bÃ¡sicos refinados trazem uma nova direÃ§Ã£o ao guarda-roupa diÃ¡rio." (~5Ã)
-7. "Esta peÃ§a [adj] suaviza os cÃ³digos da alfaiataria clÃ¡ssica." (~4Ã)
+PADRÕES DE ABERTURA — em português BR (varie — nunca repita o mesmo em produtos consecutivos):
+1. "Nesta temporada, os designers Anselmi canalizam..." (~19×)
+2. "A coleção Anselmi destaca os essenciais de guarda-roupa renovados com detalhes inesperados." (~15×)
+3. "Os designers Anselmi reinventaram os clássicos com um espírito de design meditado." (~12×)
+4. "O cashmere de toque luxuosamente macio é um pilar fundamental das coleções da Anselmi." (~11×)
+5. "As silhuetas [adj] definem a coleção feminina desta temporada." (~8×)
+6. "Os básicos refinados trazem uma nova direção ao guarda-roupa diário." (~5×)
+7. "Esta peça [adj] suaviza os códigos da alfaiataria clássica." (~4×)
 8. Abertura por qualidade: "Discreto e refinado..." / "Poderoso em sua simplicidade..." / "Elevado por detalhes inesperados..."
-9. "As coleÃ§Ãµes Anselmi sÃ£o construÃ­das sobre materiais luxuosos como..." (para cashmere)
-10. "Apresentamos a linha de [material]..." (para lanÃ§amentos de linha)
+9. "As coleções Anselmi são construídas sobre materiais luxuosos como..." (para cashmere)
+10. "Apresentamos a linha de [material]..." (para lançamentos de linha)
 
-FÃRMULA DE MATERIAL (PT-BR):
-â¢ "tricotado/a em [material], que lhe confere [sensaÃ§Ã£o resultante]"
-â¢ "tricotado/a em [material] de toque luxuosamente macio"
-â¢ "tricotado/a em [material] ultramacio"
-â¢ "tricotado/a em [material] de primeira qualidade"
+FÓRMULA DE MATERIAL (PT-BR):
+• "tricotado/a em [material], que lhe confere [sensação resultante]"
+• "tricotado/a em [material] de toque luxuosamente macio"
+• "tricotado/a em [material] ultramacio"
+• "tricotado/a em [material] de primeira qualidade"
 Exemplos adaptados:
-â "tricotada em lÃ£ merino e linho, que lhe confere uma maciez luxuosa e um toque rico"
-â "tricotado em cashmere de primeira qualidade, com decote redondo"
-â "tricotada em algodÃ£o ultramacio"
+→ "tricotada em lã merino e linho, que lhe confere uma maciez luxuosa e um toque rico"
+→ "tricotado em cashmere de primeira qualidade, com decote redondo"
+→ "tricotada em algodão ultramacio"
 
-PONTO DE TRICÃ â COMO INTEGRAR (PT-BR):
-â¢ "ponto tranÃ§a" Â· "ponto Milano de textura rica" Â· "ponto pointelle" Â· "ponto zigzag texturizado"
-â¢ "ponto escada intrincado" Â· "crochÃª" Â· "canelado fino/grosso" Â· "ponto duplo"
+PONTO DE TRICÔ — COMO INTEGRAR (PT-BR):
+• "ponto trança" · "ponto Milano de textura rica" · "ponto pointelle" · "ponto zigzag texturizado"
+• "ponto escada intrincado" · "crochê" · "canelado fino/grosso" · "ponto duplo"
 
-VOCABULÃRIO-CHAVE (PT-BR):
-guarda-roupa diÃ¡rio/moderno Â· refinado/a Â· atemporal Â· minimalismo Â· silhueta esculpida/limpa/relaxada
-arremates canelados Â· toque luxuosamente macio Â· essenciais de guarda-roupa Â· detalhes inesperados
-design meditado Â· primeira qualidade Â· ultramacio Â· espÃ­rito de design Â· barra Â· arremate em picÃ´
-ponto duplo Â· construÃ§Ã£o sem costura Â· ombros relaxados Â· formas suavizadas
+VOCABULÁRIO-CHAVE (PT-BR):
+guarda-roupa diário/moderno · refinado/a · atemporal · minimalismo · silhueta esculpida/limpa/relaxada
+arremates canelados · toque luxuosamente macio · essenciais de guarda-roupa · detalhes inesperados
+design meditado · primeira qualidade · ultramacio · espírito de design · barra · arremate em picô
+ponto duplo · construção sem costura · ombros relaxados · formas suavizadas
 
-VOCABULÃRIO PROIBIDO: incrÃ­vel Â· irresistÃ­vel Â· perfeito/a Â· combine com (prescritivo)
-Nunca explique benefÃ­cios â  "gola alta" nÃ£o precisa de "para maior aquecimento".
+VOCABULÁRIO PROIBIDO: incrível · irresistível · perfeito/a · combine com (prescritivo)
+Nunca explique benefícios — "gola alta" não precisa de "para maior aquecimento".
 
 EXEMPLOS ADAPTADOS PARA PT-BR (tom COS):
-â¢ "As silhuetas ajustadas impregnam o polo clÃ¡ssico com o charme dos anos 90. Esta peÃ§a Ã© tricotada em lyocell leve com lÃ£ para uma sensaÃ§Ã£o de toque luxuosamente macio, com gola clÃ¡ssica e arremates canelados finos."
-â¢ "Esta camisa refinada Ã© tricotada em lÃ£ merino e linho, que lhe confere uma maciez luxuosa e um toque rico. Desenvolvida em tom bege pedra versÃ¡til, apresenta gola aberta, arremates canelados finos e detalhes nos ombros."
-â¢ "Nesta temporada, os designers Anselmi canalizam a quietude do minimalismo dos anos 90. Desenvolvido em tom off-white, este vestido curto com decote em V Ã© tricotado em ponto Milano de textura rica e apresenta silhueta limpa com botonadura frontal."
-â¢ "Os designers Anselmi reinventaram os clÃ¡ssicos com um espÃ­rito de design meditado. Este cardigan de decote em V Ã© tricotado em lÃ£ merino de primeira qualidade, com silhueta levemente arredondada que se afunila nos punhos e na barra."
-â¢ "O cashmere de toque luxuosamente macio Ã© um pilar fundamental das coleÃ§Ãµes da Anselmi. Este suÃ©ter em tom cinza mescla Ã© tricotado com fio de primeira qualidade e apresenta decote redondo, ombros relaxados e arremates canelados grossos."
+• "As silhuetas ajustadas impregnam o polo clássico com o charme dos anos 90. Esta peça é tricotada em lyocell leve com lã para uma sensação de toque luxuosamente macio, com gola clássica e arremates canelados finos."
+• "Esta camisa refinada é tricotada em lã merino e linho, que lhe confere uma maciez luxuosa e um toque rico. Desenvolvida em tom bege pedra versátil, apresenta gola aberta, arremates canelados finos e detalhes nos ombros."
+• "Nesta temporada, os designers Anselmi canalizam a quietude do minimalismo dos anos 90. Desenvolvido em tom off-white, este vestido curto com decote em V é tricotado em ponto Milano de textura rica e apresenta silhueta limpa com botonadura frontal."
+• "Os designers Anselmi reinventaram os clássicos com um espírito de design meditado. Este cardigan de decote em V é tricotado em lã merino de primeira qualidade, com silhueta levemente arredondada que se afunila nos punhos e na barra."
+• "O cashmere de toque luxuosamente macio é um pilar fundamental das coleções da Anselmi. Este suéter em tom cinza mescla é tricotado com fio de primeira qualidade e apresenta decote redondo, ombros relaxados e arremates canelados grossos."
 
-ADAPTAÃÃO PARA ANSELMI:
-â¢ Substitua referÃªncias a "COS" por "os designers Anselmi" ou "a coleÃ§Ã£o Anselmi"
-â¢ Para o Fio Londres: "tricotado/a em Fio Londres â o fio exclusivo da Anselmi, de textura artesanal"
+ADAPTAÇÃO PARA ANSELMI:
+• Substitua referências a "COS" por "os designers Anselmi" ou "a coleção Anselmi"
+• Para o Fio Londres: "tricotado/a em Fio Londres — o fio exclusivo da Anselmi, de textura artesanal"
 
-FORMATLADENUNTREGA:
-**[NOME DA PEÃA]**
+FORMATO DE ENTREGA:
+**[NOME DA PEÇA]**
 
-[ParÆ Ã¡grafo editorial em portuguÃªs BR â 3 a 5 frases, ~46 palavras]
+[Parágrafo editorial em português BR — 3 a 5 frases, ~46 palavras]
 
-[Linha tÃ©cnica: Modelagem X. Fechamento. Cuidado.]
+[Linha técnica: Modelagem X. Fechamento. Cuidado.]
 
-â¢ [Spec 1]  â¢ [Spec 2]  â¢ [Spec 3]  â¢ [ComposiÃ§Ã£o]`,
+• [Spec 1]  • [Spec 2]  • [Spec 3]  • [Composição]`,
 
-  massimodutti: `MARCA DE REFERÃNCIA: MASSIMO DUTTI â Luxo AcessÃ­vel (IglÃªs)
+  massimodutti: `MARCA DE REFERÊNCIA: MASSIMO DUTTI — Luxo Acessível (Inglês)
 
 TOM E FILOSOFIA:
-Posiciona cada peÃ§a como luxo acessÃ­vel para o dia a dia. Equilibra qualidade do material com praticidade real.
+Posiciona cada peça como luxo acessível para o dia a dia. Equilibra qualidade do material com praticidade real.
 Diferente da COS (que contextualiza na arte), a Massimo Dutti contextualiza no guarda-roupa real:
 "designed to accompany every moment", "elevate your wardrobe".
-Tom de consultor de moda confiÃ¡vel â sofisticado, aspiracional, sem pretensÃ£o.
-Idioma de saÃ­da: PORTUGUÃS BRASILEIRO â escreva toda a descriÃ§Ã£o em portuguÃªs BR.
-Inspire-se nos padrÃµes e no vocabulÃ¡rio da Massimo Dutti, mas adapte para o portuguÃªs.
+Tom de consultor de moda confiável — sofisticado, aspiracional, sem pretensão.
+Idioma de saída: PORTUGUÊS BRASILEIRO — escreva toda a descrição em português BR.
+Inspire-se nos padrões e no vocabulário da Massimo Dutti, mas adapte para o português.
 
-ESTRUTURA (2 a 4 frases, ~35â50 palavras):
-[Material como protagonista â "Crafted with/from [material] for [benefÃ­cio]"] +
-[Silhueta e detalhes de design â neckline, fit, textura, ribbed trims] +
-[BenefÃ­cio funcional â conforto, versatilidade, layering] +
-[Convite sutil â  "designed to accompany...", "elevate your...", "a wardrobe investment"]
+ESTRUTURA (2 a 4 frases, ~35–50 palavras):
+[Material como protagonista — "Crafted with/from [material] for [benefício]"] +
+[Silhueta e detalhes de design — neckline, fit, textura, ribbed trims] +
+[Benefício funcional — conforto, versatilidade, layering] +
+[Convite sutil — "designed to accompany...", "elevate your...", "a wardrobe investment"]
 
-PADRÃES DE ABERTURA â em portuguÃªs BR (varie):
-1. Material como abertura â "Desenvolvido/a em lÃ£ fina para calor e maciez superiores, esta peÃ§a atemporal apresenta gola xale."
-2. ComposiÃ§Ã£o percentual â "Confeccionado/a em mescla ultramacia de 80% lÃ£ e 20% cashmere para conforto incomparÃ¡vel."
-3. PeÃ§a + qualificador premium â "Um essencial refinado em nossa linha de tricÃ´, este suÃ©ter Ã© desenvolvido em lÃ³ pura."
-4. Silhueta como entrada â "Silhuetas que se adaptam a cada preferÃªncia: a gola alta transmite presenÃ§a e aquece com leveza."
-5. Tom editorial â "Nesta proposta, descubra peÃ§as em lÃ³, mesclas e cashmere que combinam textura, maciez ie elegÃ¢ncia contida."
-6. Verbo de aÃ§Ã£o â "Desenvolvido/a com uma mescla de lÃ£ de toqque rico, este cardigan apresenta decote redondo e modelagem relaxada."
+PADRÕES DE ABERTURA — em português BR (varie):
+1. Material como abertura → "Desenvolvido/a em lã fina para calor e maciez superiores, esta peça atemporal apresenta gola xale."
+2. Composição percentual → "Confeccionado/a em mescla ultramacia de 80% lã e 20% cashmere para conforto incomparável."
+3. Peça + qualificador premium → "Um essencial refinado em nossa linha de tricô, este suéter é desenvolvido em lã pura."
+4. Silhueta como entrada → "Silhuetas que se adaptam a cada preferência: a gola alta transmite presença e aquece com leveza."
+5. Tom editorial → "Nesta proposta, descubra peças em lã, mesclas e cashmere que combinam textura, maciez e elegância contida."
+6. Verbo de ação → "Desenvolvido/a com uma mescla de lã de toque rico, este cardigan apresenta decote redondo e modelagem relaxada."
 
-FÃRMULA DE MATERIAL (PT-BR): "desenvolvido/a em [material] para [benefÃ­cio]"
-â¢ "desenvolvido em lÃ£ fina para calor e maciez superiores"
-â¢ "confeccionado em mescla ultramacia de lÃ£ e cashmere para conforto incomparÃ¡vel"
-â¢ "tricotado em lÃ£ merino pura, com acabamento canelado para um resultado refinado"
-â¢ "desenvolvido em [material] para conforto respirÃ¡vel e camadas sem esforÃ¡vo"
+FÓRMULA DE MATERIAL (PT-BR): "desenvolvido/a em [material] para [benefício]"
+• "desenvolvido em lã fina para calor e maciez superiores"
+• "confeccionado em mescla ultramacia de lã e cashmere para conforto incomparável"
+• "tricotado em lã merino pura, com acabamento canelado para um resultado refinado"
+• "desenvolvido em [material] para conforto respirável e camadas sem esforço"
 
-ADAPTAÃÃO PARA ANSELMI (composiÃ§Ãµes tÃ­picas):
-â¢ AlgodÃ£o + Poliamida â "desenvolvido em mescla macia de algodÃ£o e poliamida para conforto respirÃ¡vel e caimento limpo"
-â¢ Modal + Elastano â "desenvolvido em modal e elastano para toqque naturalmente macio com elasticidade suave"
-â¢ Fio Londres â "tricotado em Fio Londres â um fio exclusivo da Anselmi â de textura artesanal e toque rico"
-â¢ LÃ£ + Cashmere â "desenvolvido em mescla de lÃ£ e cashmere para maciez e calor superiores"
-â¢ AlgodÃ£o puro â "desenvolvido em algodÃ£o puro para conforto respirÃ¡vel e uso diÃ¡rio refinado"
+ADAPTAÇÃO PARA ANSELMI (composições típicas):
+• Algodão + Poliamida → "desenvolvido em mescla macia de algodão e poliamida para conforto respirável e caimento limpo"
+• Modal + Elastano → "desenvolvido em modal e elastano para toque naturalmente macio com elasticidade suave"
+• Fio Londres → "tricotado em Fio Londres — o fio exclusivo da Anselmi — de textura artesanal e toque rico"
+• Lã + Cashmere → "desenvolvido em mescla de lã e cashmere para maciez e calor superiores"
+• Algodão puro → "desenvolvido em algodão puro para conforto respirável e uso diário refinado"
 
-VOCABULÃRIO-CHAVE (PT-BR):
-refinado Â· atemporal Â· elegÃ¢ncia contida Â· acabamento tÃ¡til Â· ombros suavizados Â· presenÃ§a
-distinÃ§Ã£o Â· camadas sem esforÃ§o Â· essencial do dia a dia Â· investimento de guarda-roupa Â· acompanhar
-naturalmente Â· graÃ§a e conforto Â· superior Â· incomparÃ¡vel Â· temporada apÃ³s temporada
+VOCABULÁRIO-CHAVE (PT-BR):
+refinado · atemporal · elegância contida · acabamento tátil · ombros suavizados · presença
+distinção · camadas sem esforço · essencial do dia a dia · investimento de guarda-roupa · acompanhar
+naturalmente · graça e conforto · superior · incomparável · temporada após temporada
 
-VOCABULÃRIO PROIBIDO: incrÃ­vel Â· deslumbrante Â· irresistÃ­vel Â· perfeito (use "refinado", "atemporal", "essencial")
-Nunca prescreva styling diretamente â use "desenvolvido para acompanhar" nÃ£o "combine com"
+VOCABULÁRIO PROIBIDO: incrível · deslumbrante · irresistível · perfeito (use "refinado", "atemporal", "essencial")
+Nunca prescreva styling diretamente — use "desenvolvido para acompanhar" não "combine com"
 
 EXEMPLOS ADAPTADOS PARA PT-BR (tom Massimo Dutti):
-â¢ "Desenvolvido com mescla de lÃ£ de toque rico, este cardigan apresenta decote redondo e modelagem relaxada que se adapta a qualquer silhueta. Ombros suavizados conferem leveza a esta peÃ§a essencial, desenvolvida para acompanhar tanto os dias ativos quanto os momentos tranquilos. Acabamento canelado para um resultado tÃ¡til e refinado."
-â¢ "O cashmere puro define esta peÃ§a essencial â o decote V valoriza sutilmente o colo enquanto a construÃ§Ã£o leve permite camadas sem esforÃ§o. Um investimento de guarda-roupa desenvolvido para elevar sua coleÃ§Ã£o de tricÃ´ temporada apÃ³s temporada."
-â¢ "Desenvolvido em lÃ£ fina para calor e maciez superiores, este suÃ©ter atemporal apresenta gola alta e modelagem relaxada. Ombros suavizados e acabamento canelado completam o resultado refinado."
+• "Desenvolvido com mescla de lã de toque rico, este cardigan apresenta decote redondo e modelagem relaxada que se adapta a qualquer silhueta. Ombros suavizados conferem leveza a esta peça essencial, desenvolvida para acompanhar tanto os dias ativos quanto os momentos tranquilos. Acabamento canelado para um resultado tátil e refinado."
+• "O cashmere puro define esta peça essencial — o decote V valoriza sutilmente o colo enquanto a construção leve permite camadas sem esforço. Um investimento de guarda-roupa desenvolvido para elevar sua coleção de tricô temporada após temporada."
+• "Desenvolvido em lã fina para calor e maciez superiores, este suéter atemporal apresenta gola alta e modelagem relaxada. Ombros suavizados e acabamento canelado completam o resultado refinado."
 
-DIFERENÃA COS vs. MASSIMO DUTTI:
-COS posiciona na arte/estÃ©tica ("minimalismo dos anos 90").
+DIFERENÇA COS vs. MASSIMO DUTTI:
+COS posiciona na arte/estética ("minimalismo dos anos 90").
 Massimo Dutti posiciona na funcionalidade premium ("essencial desenvolvido para acompanhar cada momento").
 
 FORMATO DE ENTREGA:
-**[NOME DA PEÃA]**
+**[NOME DA PEÇA]**
 
-[2 a 4 frases em portuguÃªs BR, ~35â50 palavras]
+[2 a 4 frases em português BR, ~35–50 palavras]
 
-â¢ [Spec 1]  â¢ [Spec 2]  â¢ [Spec 3]  â¢ [ComposiÃ§Ã£o]`,
+• [Spec 1]  • [Spec 2]  • [Spec 3]  • [Composição]`,
 
-  zara: `MARCA DE REFERÃNCIA: ZARA â TÃ©cnico Objetivo (PortuguÃªs BR)
+  zara: `MARCA DE REFERÊNCIA: ZARA — Técnico Objetivo (Português BR)
 
 TOM E FILOSOFIA:
-DescriÃ§Ã£o como ficha tÃ©cnica: objetiva, sem emoÃ§Ã£o, sem adjetivos subjetivos.
-Descreve exatamente o que a peÃ§a Ã â nÃ£o o que ela faz sentir.
+Descrição como ficha técnica: objetiva, sem emoção, sem adjetivos subjetivos.
+Descreve exatamente o que a peça É — não o que ela faz sentir.
 
 ESTRUTURA (1 a 3 frases, ~80 chars total):
 [Tipo] com/de [gola/decote] e [manga]. [Ponto/Trama]. [Detalhe]. [Modelagem]. [Comprimento].
 
-REGRAS DE PREPOSIÃÃO:
-â¢ GOLA usa "de"  â "suÃ©ter de gola chaminÃ©" / "vestido de gola alta"
-â¢ DECOTE usa "com" â "blusa com decote redondo" / "cardigan com decote em V"
-â¢ Use os termos das specs literalmente â se Ã© "decote careca", nÃ£o escreva "gola redonda"
+REGRAS DE PREPOSIÇÃO:
+• GOLA usa "de"  → "suéter de gola chaminé" / "vestido de gola alta"
+• DECOTE usa "com" → "blusa com decote redondo" / "cardigan com decote em V"
+• Use os termos das specs literalmente — se é "decote careca", não escreva "gola redonda"
 
-PADRÃES DE ABERTURA (varie):
-1. "[Tipo] com/de [gola] e [manga]." â mais comum
-2. "de tricÃ´ [qualificador]." â para destacar tÃ©cnica
-3. "[Tipo] de [material/fio]." â quando o fio Ã© o diferencial
-4. Abertura por detalhe â "[CalÃ§a] de cintura alta com cÃ³s elÃ¡stico."
+PADRÕES DE ABERTURA (varie):
+1. "[Tipo] com/de [gola] e [manga]." → mais comum
+2. "de tricô [qualificador]." → para destacar técnica
+3. "[Tipo] de [material/fio]." → quando o fio é o diferencial
+4. Abertura por detalhe → "[Calça] de cintura alta com cós elástico."
 
-VOCABULÃRIO PROIBIDO: elegante Â· incrÃ­vel Â· sofisticado Â· delicado Â· irresistÃ­vel Â· perfeito Â· luxuoso
+VOCABULÁRIO PROIBIDO: elegante · incrível · sofisticado · delicado · irresistível · perfeito · luxuoso
 
 EXEMPLOS REAIS ZARA:
-â¢ "Top de tricÃ´ canelado com gola redonda e manga curta abalonada."
-â¢ "Vestido com decote ombro a ombro e manga longa. Trama canelada. Modelagem reta."
-â¢ "Cardigan de decote em V com fechamento frontal de botÃµes. Ponto pÃ©rola."
-â¢ "CalÃ§a de cintura alta com cÃ³s elÃ¡stico. TricÃ´ canelado."
+• "Top de tricô canelado com gola redonda e manga curta abalonada."
+• "Vestido com decote ombro a ombro e manga longa. Trama canelada. Modelagem reta."
+• "Cardigan de decote em V com fechamento frontal de botões. Ponto pérola."
+• "Calça de cintura alta com cós elástico. Tricô canelado."
 
 FORMATO DE ENTREGA:
-**[NOME DA PEÃA]**
+**[NOME DA PEÇA]**
 
-[1 a 3 frases tÃ©cnicas]
+[1 a 3 frases técnicas]
 
-â¢ [Spec 1]  â¢ [Spec 2]  â¢ [Spec 3]  â¢ [ComposiÃ§Ã£o]`,
+• [Spec 1]  • [Spec 2]  • [Spec 3]  • [Composição]`,
 
-  arket: `MARCA DE REFERÃNCIA: ARKET â Artesanal Minimalista (InglÃªs)
+  arket: `MARCA DE REFERÊNCIA: ARKET — Artesanal Minimalista (Inglês)
 
 TOM E FILOSOFIA:
 Escreve como um designer que explica seu processo: honesto, preciso, sem floreios.
-Foco em CRAFT (como foi feita) + MATERIAL (de que Ã© feita) + USO (como vestir).
-Textos curtos e densos â cada palavra carrega peso. TransparÃªncia Ã© o valor central.
-Idioma de saÃ­da: PORTUGUÃS BRASILEIRO â escreva toda a descriÃ§Ã£o em portuguÃªs BR.
-Inspire-se na estrutura e no tom da Arket, mas adapte o vocabulÃ¡rio para o portuguÃªs.
+Foco em CRAFT (como foi feita) + MATERIAL (de que é feita) + USO (como vestir).
+Textos curtos e densos — cada palavra carrega peso. Transparência é o valor central.
+Idioma de saída: PORTUGUÊS BRASILEIRO — escreva toda a descrição em português BR.
+Inspire-se na estrutura e no tom da Arket, mas adapte o vocabulário para o português.
 
 ESTRUTURA (2 a 3 frases, ~25 palavras):
 [Abertura craft] + [Detalhe construtivo "com acabamento canelado" / "com barras caneladas"] + [Uso opcional "Vista sobre..." / "Combina com..."]
 
-FÃRMULA DE MATERIAL: "desenvolvido/a em [puro/macio] [material]" â sem benefÃ­cio emocional, apenas fato.
-â¢ "desenvolvido em puro cashmere" (nunca "cashmere luxuoso")
-â¢ "tricotado em mescla de alpaca e lÃ£"
-â¢ "desenvolvido em algodÃ£o macio, com acabamento canelado"
+FÓRMULA DE MATERIAL: "desenvolvido/a em [puro/macio] [material]" — sem benefício emocional, apenas fato.
+• "desenvolvido em puro cashmere" (nunca "cashmere luxuoso")
+• "tricotado em mescla de alpaca e lã"
+• "desenvolvido em algodão macio, com acabamento canelado"
 
-PADRÃES DE ABERTURA â adaptar para PT-BR (varie entre eles):
-1. "Tricotado/a em [material/mescla], este/a [tipo]..." â mais comum
-2. "[Material] [tipo] tricotado em [tÃ©cnica]." â direto ao ponto
-3. "Um/Uma essencial refinado/a, este/a [tipo] Ã© desenvolvido/a em [material]..." â para clÃ¡ssicos
-4. "Desenvolvido/a em [material] e finalizado/a com [detalhe]." â detalhe como protagonista
-5. "Marcado/a por [detalhe], este/a [tipo]..." â quando o detalhe define
+PADRÕES DE ABERTURA — adaptar para PT-BR (varie entre eles):
+1. "Tricotado/a em [material/mescla], este/a [tipo]..." → mais comum
+2. "[Material] [tipo] tricotado em [técnica]." → direto ao ponto
+3. "Um/Uma essencial refinado/a, este/a [tipo] é desenvolvido/a em [material]..." → para clássicos
+4. "Desenvolvido/a em [material] e finalizado/a com [detalhe]." → detalhe como protagonista
+5. "Marcado/a por [detalhe], este/a [tipo]..." → quando o detalhe define
 
-VOCABULÃRIO-CHAVE (PT-BR): desenvolvido em Â· tricotado em Â· finalizado com Â· acabamento canelado Â· barras caneladas Â· essencial refinado Â· uso diÃ¡rio Â· versÃ¡til Â· clÃ¡ssico Â· puro Â· macio
-EquivalÃªncias: "crafted from" â "desenvolvido em" Â· "detailed with" â "finalizado com" Â· "finished with ribbed trims" â "com acabamento canelado" Â· "everyday dressing" â "uso diÃ¡rio"
+VOCABULÁRIO-CHAVE (PT-BR): desenvolvido em · tricotado em · finalizado com · acabamento canelado · barras caneladas · essencial refinado · uso diário · versátil · clássico · puro · macio
+Equivalências: "crafted from" → "desenvolvido em" · "detailed with" → "finalizado com" · "finished with ribbed trims" → "com acabamento canelado" · "everyday dressing" → "uso diário"
 
-VOCABULÃRIO PROIBIDO: luxuoso Â· incrÃ­vel Â· irresistÃ­vel Â· perfeito Â· elegante (use apenas fatos e "refinado")
+VOCABULÁRIO PROIBIDO: luxuoso · incrível · irresistível · perfeito · elegante (use apenas fatos e "refinado")
 
 EXEMPLOS ADAPTADOS PARA PT-BR (baseados no tom Arket):
-â¢ "SuÃ©ter desenvolvido em algodÃ£o macio, finalizado com acabamento canelado. O detalhe recortado amplia as possibilidades de styling com leveza."
-â¢ "Tricotado em mescla de alpaca e lÃ£, este suÃ©ter tem superfÃ­cie macia e levemente felpuda que traz textura sutil ao uso diÃ¡rio."
-â¢ "Um essencial refinado, este cardigan Ã© desenvolvido em algodÃ£o com gola de camisa clÃ¡ssica e fechamento frontal com botÃµes."
-â¢ "Cardigan de algodÃ£o tricotado em ponto Milano."
+• "Suéter desenvolvido em algodão macio, finalizado com acabamento canelado. O detalhe recortado amplia as possibilidades de styling com leveza."
+• "Tricotado em mescla de alpaca e lã, este suéter tem superfície macia e levemente felpuda que traz textura sutil ao uso diário."
+• "Um essencial refinado, este cardigan é desenvolvido em algodão com gola de camisa clássica e fechamento frontal com botões."
+• "Cardigan de algodão tricotado em ponto Milano."
 
 FORMATO DE ENTREGA:
-**[NOME DA PEÃA]**
+**[NOME DA PEÇA]**
 
-[2 a 3 frases em portuguÃªs BR, ~25 palavras]
+[2 a 3 frases em português BR, ~25 palavras]
 
-â¢ [Spec 1]  â¢ [Spec 2]  â¢ [Spec 3]  â¢ [ComposiÃ§Ã£o]`,
+• [Spec 1]  • [Spec 2]  • [Spec 3]  • [Composição]`,
 
-  hm: `MARCA DE REFERÃNCIA: H&M BRASIL â CatÃ¡logo TÃ©cnico (PortuguÃªs BR)
+  hm: `MARCA DE REFERÊNCIA: H&M BRASIL — Catálogo Técnico (Português BR)
 
 TOM E FILOSOFIA:
-CatÃ¡logo tÃ©cnico: uma frase longa e densa que empilha todos os atributos em sequÃªncia lÃ³gica.
-Sem emoÃ§Ã£o, sem contexto de coleÃ§Ã£o, sem sugestÃ£o de styling. Pura especificaÃ§Ã£o.
-A informaÃ§Ã£o mais importante vem primeiro.
+Catálogo técnico: uma frase longa e densa que empilha todos os atributos em sequência lógica.
+Sem emoção, sem contexto de coleção, sem sugestão de styling. Pura especificação.
+A informação mais importante vem primeiro.
 
 ESTRUTURA (1 a 2 frases densas em PT-BR, ~22 palavras):
-[Tipo] + [fit/comprimento] + "em malha [adj] [tÃ©cnica]" + "de/em [composiÃ§Ã£o]" + ", com [decote/gola]" + "[fechamento]" + "[manga]" + "[detalhes finais]"
+[Tipo] + [fit/comprimento] + "em malha [adj] [técnica]" + "de/em [composição]" + ", com [decote/gola]" + "[fechamento]" + "[manga]" + "[detalhes finais]"
 
-FÃRMULA DE MATERIAL: "em malha [adjetivo tÃ¡til] [tÃ©cnica] de/em [composiÃ§Ã£o]"
-â¢ "em malha tricÃ´ macia de mescla de cashmere e lÃ£"
-â¢ "em malha canelada macia de algodÃ£o"
-â¢ "em malha felpuda macia de mescla de mohair e lÃ£"
-â¢ "em malha texturizada de poliamida e algodÃ£o"
+FÓRMULA DE MATERIAL: "em malha [adjetivo tátil] [técnica] de/em [composição]"
+• "em malha tricô macia de mescla de cashmere e lã"
+• "em malha canelada macia de algodão"
+• "em malha felpuda macia de mescla de mohair e lã"
+• "em malha texturizada de poliamida e algodão"
 
-REGRAS DE PREPOSIÃÃO:
-â¢ GOLA usa "de" â "de gola alta canelada"
-â¢ DECOTE usa "com" â "com decote redondo"
+REGRAS DE PREPOSIÇÃO:
+• GOLA usa "de" → "de gola alta canelada"
+• DECOTE usa "com" → "com decote redondo"
 
-PADRÃES DE ABERTURA (varie):
-1. "SuÃ©ter em malha [adj]..." (~22% dos casos)
-2. "SuÃ©ter oversize em malha..." (~14%)
+PADRÕES DE ABERTURA (varie):
+1. "Suéter em malha [adj]..." (~22% dos casos)
+2. "Suéter oversize em malha..." (~14%)
 3. "Cardigan curto em malha..." (~14%)
 4. "Cardigan em malha [adj]..." (~13%)
-5. "SuÃ©ter ajustado ao corpo..." (~9%)
+5. "Suéter ajustado ao corpo..." (~9%)
 6. "Vestido [fit] em malha..." (~8%)
 
-VOCABULÃRIO-CHAVE: em malha Â· macia Â· leve Â· canelada Â· tricÃ´ Â· mescla de Â· decote redondo Â· decote em v Â· fechamento frontal Â· botÃµes Â· ombros caÃ­dos Â· mangas compridas Â· punhos canelados Â· oversize Â· ajustado ao corpo
+VOCABULÁRIO-CHAVE: em malha · macia · leve · canelada · tricô · mescla de · decote redondo · decote em v · fechamento frontal · botões · ombros caídos · mangas compridas · punhos canelados · oversize · ajustado ao corpo
 
-VOCABULÃRIO PROIBIDO: elegante Â· artesanal Â· sofisticado Â· exclusivo Â· premium (use apenas termos tÃ©cnicos)
+VOCABULÁRIO PROIBIDO: elegante · artesanal · sofisticado · exclusivo · premium (use apenas termos técnicos)
 
 EXEMPLOS REAIS H&M:
-â¢ "Cardigan curto em tricÃ´ macio de cashmere, com decote redondo canelado e faixa de abotoamento em tecido duplo, com fechamento frontal com botÃµes. Ombros com costura caÃ­da, mangas compridas e acabamento canelado nos punhos e na barra."
-â¢ "SuÃ©ter em malha tricÃ´ macia de mescla de cashmere e lÃ£. Decote em v canelado, pala em malha dupla face sobre os ombros e atrÃ¡s, alÃ©m de ombros levemente caÃ­dos."
-â¢ "SuÃ©ter oversize em malha macia de mescla de mohair e lÃ£. Decote redondo, ombros caÃ­dos e mangas compridas com punhos canelados."
+• "Cardigan curto em tricô macio de cashmere, com decote redondo canelado e faixa de abotoamento em tecido duplo, com fechamento frontal com botões. Ombros com costura caída, mangas compridas e acabamento canelado nos punhos e na barra."
+• "Suéter em malha tricô macia de mescla de cashmere e lã. Decote em v canelado, pala em malha dupla face sobre os ombros e atrás, além de ombros levemente caídos."
+• "Suéter oversize em malha macia de mescla de mohair e lã. Decote redondo, ombros caídos e mangas compridas com punhos canelados."
 
 FORMATO DE ENTREGA:
-**[NOME DA PEÃA]**
+**[NOME DA PEÇA]**
 
 [1 a 2 frases densas em PT-BR]
 
-â¢ [Spec 1]  â¢ [Spec 2]  â¢ [Spec 3]  â¢ [ComposiÃ§Ã£o]`,
+• [Spec 1]  • [Spec 2]  • [Spec 3]  • [Composição]`,
 
-  aritzia: `MARCA DE REFERÃNCIA: ARITZIA â Conversacional + Storytelling (InglÃªs)
+  aritzia: `MARCA DE REFERÊNCIA: ARITZIA — Conversacional + Storytelling (Inglês)
 
 TOM E FILOSOFIA:
-Sistema Ãºnico de 2 camadas: descriÃ§Ã£o curta (tÃ©cnica) + "Designer's Note" (conversacional).
-Como uma amiga estilosa que explica por que aquele material Ã© especial.
-O grande diferencial Ã© tratar fios/materiais como personagens com nome prÃ³prio.
-Nunca pretensioso â direto, entusiasta, sem afetaÃ§Ã£o.
+Sistema único de 2 camadas: descrição curta (técnica) + "Designer's Note" (conversacional).
+Como uma amiga estilosa que explica por que aquele material é especial.
+O grande diferencial é tratar fios/materiais como personagens com nome próprio.
+Nunca pretensioso — direto, entusiasta, sem afetação.
 
-ESTRUTURA OBRIGATÃRIA (2 camadas):
+ESTRUTURA OBRIGATÓRIA (2 camadas):
 
-Idioma de saÃ­da: PORTUGUÃS BRASILEIRO â escreva toda a descriÃ§Ã£o em portuguÃªs BR.
+Idioma de saída: PORTUGUÊS BRASILEIRO — escreva toda a descrição em português BR.
 
-CAMADA 1 â DESCRIÃÃO CURTA (~40 chars, para card/listagem) â em PT-BR:
-[Adj de peso/material] + [tipo de gola] + [tipo da peÃ§a] + [1 detalhe]
-Exemplos PT-BR: "Cardigan de decote redondo em cashmere leve" Â· "SuÃ©ter de gola alta com cÃ³s franzido"
+CAMADA 1 — DESCRIÇÃO CURTA (~40 chars, para card/listagem) — em PT-BR:
+[Adj de peso/material] + [tipo de gola] + [tipo da peça] + [1 detalhe]
+Exemplos PT-BR: "Cardigan de decote redondo em cashmere leve" · "Suéter de gola alta com cós franzido"
 
-CAMADA 2 â NOTA DO DESIGNER (~40 a 50 palavras em PT-BR):
-1. "Este/a Ã© um/a [tipo] com [detalhe] e [fit]."  â PADRÃO DOMINANTE: 83% das notas!
-2. "Ã tricotado/a com [NOME DO FIO ANSELMIâ¢] â [storytelling do material em 1 frase]."
-3. "[BenefÃ­cio sensorial ou de uso]."
+CAMADA 2 — NOTA DO DESIGNER (~40 a 50 palavras em PT-BR):
+1. "Este/a é um/a [tipo] com [detalhe] e [fit]."  ← PADRÃO DOMINANTE: 83% das notas!
+2. "É tricotado/a com [NOME DO FIO ANSELMI™] — [storytelling do material em 1 frase]."
+3. "[Benefício sensorial ou de uso]."
 
-NOMES DE FIO ANSELMI (crie baseado na composiÃ§Ã£o â mantenha o nome em inglÃªs como marca registrada):
-â¢ AlgodÃ£o + Poliamida â "Soft Touch Cottonâ¢"
-â¢ Modal + Elastano â "Modal Flexâ¢"
-â¢ Fio Londres (exclusivo Anselmi) â "Fio Londresâ¢ â o fio artesanal exclusivo da Anselmi"
-â¢ LÃ£ + Cashmere â "Cashmere Blendâ¢"
-â¢ Micromodal + Poliamida â "Silk Modalâ¢"
-â¢ Viscose + Poliamida â "Fluid Viscoseâ¢"
-â¢ Poliamida + AlgodÃ£o â "Performance Cottonâ¢"
+NOMES DE FIO ANSELMI (crie baseado na composição — mantenha o nome em inglês como marca registrada):
+• Algodão + Poliamida → "Soft Touch Cotton™"
+• Modal + Elastano → "Modal Flex™"
+• Fio Londres (exclusivo Anselmi) → "Fio Londres™ — o fio artesanal exclusivo da Anselmi"
+• Lã + Cashmere → "Cashmere Blend™"
+• Micromodal + Poliamida → "Silk Modal™"
+• Viscose + Poliamida → "Fluid Viscose™"
+• Poliamida + Algodão → "Performance Cotton™"
 
-VOCABULÃRIO-CHAVE (PT-BR): favorito dos clientes Â· Ã  altura do nome Â· cobiÃ§ado por p¢· maciez caracterÃ­stica Â· maciez aveludada Â· uso o ano todo Â· todas as estaÃ§Ãµes Â· ombros caÃ­dos Â· acabamento canelado Â· modelagem clÃ¡ssica Â· modelagem relaxada Â· modelagem justinha Â· barra em vieira
+VOCABULÁRIO-CHAVE (PT-BR): favorito dos clientes · à altura do nome · cobiçado por · maciez característica · maciez aveludada · uso o ano todo · todas as estações · ombros caídos · acabamento canelado · modelagem clássica · modelagem relaxada · modelagem justinha · barra em vieira
 
 EXEMPLOS ADAPTADOS PARA PT-BR (tom Aritzia):
 Curta: "Cardigan de decote redondo em Soft Touch Cotton com barra em vieira"
-Nota: "Este Ã© um cardigan de decote redondo com barra em vieira e modelagem justinha. Ã tricotado com o Soft Touch Cottonâ¢ da Anselmi â o fio leve que estÃ¡ altura do nome. Oferece a maciez aveludada do algodÃ£o com toque de segunda pele."
+Nota: "Este é um cardigan de decote redondo com barra em vieira e modelagem justinha. É tricotado com o Soft Touch Cotton™ da Anselmi — o fio leve que está à altura do nome. Oferece a maciez aveludada do algodão com toque de segunda pele."
 
 Curta: "Cardigan leve de cashmere puro com decote redondo"
-Nota: "Este Ã© um cardigan de decote redondo com modelagem clÃ¡ssica. Ã tricotado com o Cashmere Blendâ¢ da Anselmi â fio de cashmere leve, para todas as estaÃ§Ãµes, obiÃ§ado por sua maciez caracterÃ­stica e calor. O melhor disponÃ­vel."
+Nota: "Este é um cardigan de decote redondo com modelagem clássica. É tricotado com o Cashmere Blend™ da Anselmi — fio de cashmere leve, para todas as estações, cobiçado por sua maciez característica e calor. O melhor disponível."
 
 FORMATO DE ENTREGA:
-**[NOME DA PEÃA]**
+**[NOME DA PEÇA]**
 
 Curta: [~40 chars em PT-BR]
-Nota: "Este/a Ã© um/a [tipo]... Ã tricotado/a com o [FIO ANSELMIâ¢] â [storytelling]. [BenefÃ­cio]."
+Nota: "Este/a é um/a [tipo]... É tricotado/a com o [FIO ANSELMI™] — [storytelling]. [Benefício]."
 
-â¢ [Spec 1]  â¢ [Spec 2]  â¢ [Spec 3]  â¢ [ComposiÃ§Ã£o]`
+• [Spec 1]  • [Spec 2]  • [Spec 3]  • [Composição]`
 };
 
 const BRAND_NAMES = {
-  cos: 'COS â Editorial de Curadoria',
-  massimodutti: 'Massimo Dutti â Luxo AcessÃ­vel',
-  arket: 'Arket â Artesanal Minimalista',
-  zara: 'Zara â TÃ©cnico Objetivo',
-  hm: 'H&M â CatÃ¡logo TÃ©cnico',
-  aritzia: 'Aritzia â Conversacional'
+  cos: 'COS — Editorial de Curadoria',
+  massimodutti: 'Massimo Dutti — Luxo Acessível',
+  arket: 'Arket — Artesanal Minimalista',
+  zara: 'Zara — Técnico Objetivo',
+  hm: 'H&M — Catálogo Técnico',
+  aritzia: 'Aritzia — Conversacional'
 };
 
-// ââââââââââââââââââââââââââââââââââââââââââ
+// ──────────────────────────────────────────
 // GERAR PROMPT
-// ââââââââââââââââââââââââââââââââââââââââââ
+// ──────────────────────────────────────────
 
 function generatePrompt() {
   if (!selectedBrand) {
@@ -996,17 +1037,18 @@ function generatePrompt() {
   const specsManual = document.getElementById('specsManual').value.trim();
   const hasSlides   = slidesLink !== '';
   const hasPdf      = currentPdfName !== '';
+  const hasPptx     = currentPptxName !== '';
   const hasManual   = specsManual !== '';
 
-  const line56  = 'â'.repeat(56);
-  const line56d = 'â'.repeat(56);
+  const line56  = '═'.repeat(56);
+  const line56d = '─'.repeat(56);
 
   let out = line56 + '\n';
-  out += ' PROMPT ANSELMI â ' + BRAND_NAMES[selectedBrand].toUpperCase() + '\n';
+  out += ' PROMPT ANSELMI — ' + BRAND_NAMES[selectedBrand].toUpperCase() + '\n';
   out += line56 + '\n\n';
 
-  out += 'VocÃª Ã© o copywriter de e-commerce da Anselmi,\n';
-  out += 'marca brasileira de tricÃ´ feminino premium.\n';
+  out += 'Você é o copywriter de e-commerce da Anselmi,\n';
+  out += 'marca brasileira de tricô feminino premium.\n';
   out += 'Use a skill anselmi-descricoes para executar.\n\n';
   out += line56d + '\n\n';
 
@@ -1014,41 +1056,54 @@ function generatePrompt() {
   out += line56d + '\n';
 
   if (hasSlides) {
-    out += '\nMATERIAL DE REFERÃNCIA â GOOGLE SLIDES:\n';
+    out += '\nMATERIAL DE REFERÊNCIA — GOOGLE SLIDES:\n';
     out += slidesLink + '\n\n';
     out += 'COMO EXECUTAR:\n';
     out += '1. Acesse o link acima.\n';
-    out += '2. Cada slide = 1 produto â percorra todos.\n';
+    out += '2. Cada slide = 1 produto — percorra todos.\n';
     out += '3. Para cada produto, identifique: nome, tipo,\n';
-    out += '   cor, composiÃ§Ã£o, ponto, modelagem, manga,\n';
-    out += '   gola/decote, comprimento e detalhes visÃ­veis.\n';
+    out += '   cor, composição, ponto, modelagem, manga,\n';
+    out += '   gola/decote, comprimento e detalhes visíveis.\n';
     out += '4. Aplique as regras da marca acima.\n';
-    out += '5. Varie o padrÃ£o de abertura entre os produtos.\n';
+    out += '5. Varie o padrão de abertura entre os produtos.\n';
     out += '6. Separe cada produto assim:\n';
-    out += '   ââ PRODUTO 1 â [Nome] ââââââââââââââ\n\n';
+    out += '   ── PRODUTO 1 — [Nome] ──────────────\n\n';
   } else if (hasPdf) {
-    out += '\nMATERIAL DE REFERÃNCIA â PDF ANEXADO:\n';
-    out += 'ð ' + currentPdfName + '\n\n';
+    out += '\nMATERIAL DE REFERÊNCIA — PDF ANEXADO:\n';
+    out += '📄 ' + currentPdfName + '\n\n';
     out += 'COMO EXECUTAR:\n';
     out += '1. Leia o PDF anexado a esta mensagem.\n';
-    out += '2. Cada pÃ¡gina ou seÃ§Ã£o = 1 produto.\n';
+    out += '2. Cada página ou seção = 1 produto.\n';
     out += '3. Para cada produto, identifique: nome, tipo,\n';
-    out += '   cor, composiÃ§Ã£o, ponto, modelagem, manga,\n';
-    out += '   gola/decote, comprimento e detalhes visÃ­veis.\n';
+    out += '   cor, composição, ponto, modelagem, manga,\n';
+    out += '   gola/decote, comprimento e detalhes visíveis.\n';
     out += '4. Aplique as regras da marca acima.\n';
-    out += '5. Varie o padrÃ£o de abertura entre os produtos.\n';
+    out += '5. Varie o padrão de abertura entre os produtos.\n';
     out += '6. Separe cada produto assim:\n';
-    out += '   ââ PRODUTO 1 â [Nome] ââââââââââââââ\n\n';
+    out += '   ── PRODUTO 1 — [Nome] ──────────────\n\n';
+  } else if (hasPptx) {
+    out += '\nMATERIAL DE REFERÊNCIA — PPTX ANEXADO:\n';
+    out += '📑 ' + currentPptxName + '\n\n';
+    out += 'COMO EXECUTAR:\n';
+    out += '1. Leia o PPTX anexado a esta mensagem.\n';
+    out += '2. Cada slide = 1 produto — percorra todos.\n';
+    out += '3. Para cada produto, identifique: nome, tipo,\n';
+    out += '   cor, composição, ponto, modelagem, manga,\n';
+    out += '   gola/decote, comprimento e detalhes visíveis.\n';
+    out += '4. Aplique as regras da marca acima.\n';
+    out += '5. Varie o padrão de abertura entre os produtos.\n';
+    out += '6. Separe cada produto assim:\n';
+    out += '   ── PRODUTO 1 — [Nome] ──────────────\n\n';
   } else if (hasManual) {
     out += '\nSPECS DO PRODUTO:\n';
     out += specsManual + '\n\n';
-    out += 'Gere a descriÃ§Ã£o completa aplicando as regras\n';
+    out += 'Gere a descrição completa aplicando as regras\n';
     out += 'da marca acima para este produto.\n\n';
   } else {
-    out += '\nINSTRUÃÃO:\n';
+    out += '\nINSTRUÇÃO:\n';
     out += 'Aplique as regras da marca acima ao produto\n';
-    out += 'que serÃ¡ descrito. ForneÃ§a as specs da peÃ§a\n';
-    out += 'na sequÃªncia desta mensagem.\n\n';
+    out += 'que será descrito. Forneça as specs da peça\n';
+    out += 'na sequência desta mensagem.\n\n';
   }
 
   out += line56 + '\n';
@@ -1070,7 +1125,7 @@ function copyPrompt() {
   const text = document.getElementById('outputText').textContent;
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.getElementById('copyBtn');
-    btn.textContent = 'â Copiado';
+    btn.textContent = '✓ Copiado';
     btn.classList.add('copied');
     setTimeout(() => {
       btn.textContent = 'Copiar';
@@ -1094,6 +1149,7 @@ function resetAll() {
   document.getElementById('slidesClear').style.display = 'none';
   document.getElementById('specsManual').value = '';
   clearPdf();
+  clearPptx();
   document.getElementById('errorMsg').classList.remove('visible');
   document.getElementById('outputArea').classList.remove('visible');
   document.getElementById('outputText').textContent = '';
@@ -1101,6 +1157,7 @@ function resetAll() {
   document.querySelectorAll('.ref-tab').forEach((t,i) => t.classList.toggle('active', i===0));
   document.getElementById('panel-slides').classList.add('active');
   document.getElementById('panel-pdf').classList.remove('active');
+  document.getElementById('panel-pptx').classList.remove('active');
   document.getElementById('panel-manual').classList.remove('active');
 }
 </script>
